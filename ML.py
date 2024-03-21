@@ -2,11 +2,6 @@ import streamlit as st
 import pickle
 import numpy as np
 
-from scikit-learn.preprocessing import StandardScaler, LabelEncoder
-from sklearn.model_selection import train_test_split
-
-from sklearn.tree import DecisionTreeRegressor
-
 def load_model():
     with open('saved_steps1.pkl', 'rb') as file:
         data = pickle.load(file)
