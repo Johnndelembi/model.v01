@@ -2,6 +2,16 @@ import streamlit as st
 import pickle
 import numpy as np
 
+from sklearn.preprocessing import StandardScaler, LabelEncoder
+from sklearn.model_selection import train_test_split
+
+from sklearn.tree import DecisionTreeRegressor
+from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor
+from sklearn.svm import SVC
+from sklearn.linear_model import LinearRegression
+from sklearn.neural_network import MLPClassifier
+from sklearn.metrics import confusion_matrix, classification_report, mean_squared_error, mean_absolute_error
+
 def load_model():
     with open('saved_steps1.pkl', 'rb') as file:
         data = pickle.load(file)
